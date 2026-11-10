@@ -21,9 +21,9 @@ out_dir <- "outputs/figures/kent_2025_08"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 species_files <- c(
-  "Apis mellifera" = "data/raw/Apis_mellifera.csv",
-  "Bombus impatiens" = "data/raw/Bombus_impatiens.csv",
-  "Xylocopa virginica" = "data/raw/Xylocopa_virginica.csv"
+  "Apis mellifera" = "data/pilot_inputs/Apis_mellifera.csv",
+  "Bombus impatiens" = "data/pilot_inputs/Bombus_impatiens.csv",
+  "Xylocopa virginica" = "data/pilot_inputs/Xylocopa_virginica.csv"
 )
 
 parse_observed_date <- function(x) {
@@ -81,7 +81,7 @@ cat("\n--- Statewide CSV county labels for selected month (top 10) ---\n")
 print(head(sort(table(selected$county_label), decreasing = TRUE), 10L))
 
 # Use the boundary previously downloaded in the Kent NLCD pilot.
-county_file <- "data/raw/county_boundary_2024/cb_2024_us_county_500k.shp"
+county_file <- "data/pilot_inputs/kent_2024.geojson"
 if (!file.exists(county_file)) {
   stop("County boundary file not found: ", county_file,
        ". Copy the county_boundary_2024 folder from the Bee project into data/raw/.")
