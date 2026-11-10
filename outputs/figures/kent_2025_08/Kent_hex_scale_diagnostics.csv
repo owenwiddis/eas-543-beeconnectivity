@@ -1,0 +1,4 @@
+"hex_width_m","n_cells","total_count","average_all_cells","median_all_cells","median_nonzero_cells","zero_cells","cells_with_at_least_10","max_cell_count"
+4000,195,208,1.06666666666667,0,3,144,3,14
+6000,95,208,2.18947368421053,0,3.5,59,10,17
+8000,58,208,3.58620689655172,0,6.5,34,10,34
